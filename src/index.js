@@ -1,10 +1,13 @@
 // object destructuring i.e. {MovingObject}
 const {MovingObject} = require("./moving_object.js");
 const {Asteroid} = require("./asteroid.js");
+const {Game} = require("./game.js");
 
+// gives access to these classes to the user in the chrome console
 // testing purposes only
 window.MovingObject = MovingObject;
 window.Asteroid = Asteroid;
+window.Game = Game;
 
 document.addEventListener("DOMContentLoaded", function(){
     const canvas = document.getElementById('game-canvas');
@@ -18,8 +21,15 @@ document.addEventListener("DOMContentLoaded", function(){
     // });
     // mo.draw(ctx);
 
-    const as = new Asteroid({
-        pos: [30,30]
-    });
-    as.draw(ctx);
+    // const as = new Asteroid({
+    //     pos: [30,30]
+    // });
+
+    // as.draw(ctx);
+
+    const first_game = new Game({
+
+    })
+
+    first_game.draw(ctx);
 });

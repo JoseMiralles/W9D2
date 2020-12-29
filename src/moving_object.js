@@ -1,5 +1,5 @@
 function MovingObject(options) {
-    this.pos = options["pos"];
+    this.pos = options["pos"];      // alternative options.pos
     this.vel = options["vel"];
     this.radius = options["radius"];
     this.color = options["color"];
