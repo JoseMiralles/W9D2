@@ -2,6 +2,7 @@
 const {MovingObject} = require("./moving_object.js");
 const {Asteroid} = require("./asteroid.js");
 const {Game} = require("./game.js");
+const {GameView} = require("./game_view");
 
 // gives access to these classes to the user in the chrome console
 // testing purposes only
@@ -27,9 +28,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
     // as.draw(ctx);
 
-    const first_game = new Game({
+    const first_game = new Game({});
 
-    })
-
-    first_game.draw(ctx);
+    const gameView = new GameView(first_game, ctx);
+    gameView.start();
 });
